@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 맨 위 JOIN 글자 */
+#join {
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ffc501;
+}
+
+/* 회원가입창 전체 영역 */
+#containerBox {
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px 40px; /* 상하 좌우 */
+    border: 1px solid #FFC501;
+    border-radius: 8px;
+    background-color: #ffffffff;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4), inset 0px 0px 5px rgba(255, 196, 1, 0.918);
+/* box-shadow: <horizontal-offset> <vertical-offset> <blur-radius> <spread-radius> <color>; */
+}
+
+.containerForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    margin-bottom: -10px;
+}
+
+.containerForm input {
+    color: #888;
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 15px;
+}
+
+.containerRegister {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerRegister input:focus {
+    outline: 0;
+    border-color: #888;
+}
+
+/* 유효값 검사 관련 */
+.containerRegister.success small {
+    border-color: var(--successColor);
+    visibility: visible;
+}
+
+.containerRegister.fail small {
+    border-color: var(--failColor);
+    visibility: visible;
+}
+
+.containerRegister.success small {
+    color: var(--successColor);
+    visibility: visible;
+}
+
+.containerRegister.fail small {
+    color: var(--failColor);
+    visibility: visible;
+}
+
+
+input {
+    border: none;
+    border-bottom: 2px solid #DCDCDC;
+    outline: none;
+    margin-top: 5px;
+    width: 100%;
+}
+
+small {
+    visibility: hidden;
+    margin-top: 1px;
+    display: block;
+    padding-top: 10px;
+}
+
+/* 이메일 주소 & 이메일 인증번호 확인 */
+.email_verify_button, .address_search_button {
+    display: inline-block;
+    color: #2B5923;
+    background-color: #FFC501;
+    border-radius: 8px;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.email_input_container, .address_input_container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.email_input_container.email {
+    flex-grow: 2;
+}
+
+
+/* 하단 회원가입 버튼 */
+.registerButton {
+    color: #2B5923;
+    background-color: #FFC501;
+    text-align: center;
+    width: 100%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: solid #FFC501;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    grid-column: span 2;
+    cursor: pointer;
+}

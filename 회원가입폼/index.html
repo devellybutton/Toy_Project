@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="containerBox" class="containerBox">
+        <h2 id="join">JOIN</h2>
+        <form id="containerForm" class="containerForm" autocomplete="off">
+        <div class="containerRegister">
+            <label for="username">이름</label>
+            <input type="text" id="userName" class="userName">
+            <small class="input_error" id="input_error1">2-4자 이내 한글을 입력해주세요.</small>
+        </div>
+        <div class="containerRegister">
+            <label for="phoneNumber">연락처</label>
+            <input type="text" id="phoneNumber" class="phoneNumber" placeholder="예) 01012345678">
+            <small class="input_error" id="input_error2">(-)없이 숫자 11자리를 입력해주세요.</small>
+        </div>
+        <div class="containerRegister">
+            <label for="address">주소</label>
+            <div class="address_input_container">
+                <input type="text" id="address" class="address" placeholder="제주특별자치도 서귀포시 가가로 14">
+                <div onclick="findAddress()" class="address_search_button">주소 찾기</div>
+            </div>
+            <small class="input_error" id="input_error3">메시지</small>
+        </div>
+        <div class="containerRegister">
+            <label for="address_detail">상세주소</label>
+            <input type="text" id="address_detail" class="address_detail" placeholder="(상애동)">
+            <small class="input_error" id="input_error4">메시지</small>
+        </div>
+        <div class="containerRegister">
+            <label for="email">이메일 주소</label>
+            <div class="email_input_container">
+                <input type="email" id="email" class="email" placeholder="예) honeyTouse@honey.co.kr">
+                <div class="email_verify_button", id="send_email_verify">이메일 인증</div>
+            </div>
+            <small class="input_error" id="input_error5">메시지</small>
+        </div>
+        <div class="containerRegister">
+            <label for="email2">이메일 인증번호 확인</label>
+            <div class="email_input_container">
+                <input type="text" id="email_verify" class="email" placeholder="숫자 6자리">
+                <div class="email_verify_button", id="email_verification_end">인증확인</div>
+            </div>
+            <small class="input_error"id="input_error6">메시지</small>
+        </div>
+        <div class="containerRegister">
+            <label for="password1">비밀번호</label>
+            <input type="password" id="password1" class="password">
+            <small class="input_error"id="input_error7">메시지</small>
+        </div>
+        <div class="containerRegister">
+            <label for="password2">비밀번호 확인</label>
+            <input type="password" id="password2" class="password">
+            <small class="input_error" id="input_error8">메시지</small>
+        </div>
+        <button class="registerButton" type="submit">회원가입</button>
+        </form>
+    </div>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="findAddress.js"></script>
+    <script src="valid_name.js"></script>
+    <script src="valid_number.js"></script>
+</body>
+</html>
