@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     phoneNumber.addEventListener('focus', function() {
-        // Display error text only when input is in focus
         if (!isValidInput(this.value)) {
             errorText.style.visibility = 'visible';
             this.style.borderColor = 'red';
