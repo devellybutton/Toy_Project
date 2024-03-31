@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function ResetButton() {
+function ResetButton({ onClick }) {
 
     return (
-        <StyledResetButton></StyledResetButton>
+        <StyledResetButton 
+            onClick={onClick}>
+        </StyledResetButton>
     )
 }
 

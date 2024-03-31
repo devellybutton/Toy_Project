@@ -1,4 +1,5 @@
 import Uploader from "./components/Uploader";
+// import Uploader2 from "./components/Uploader2";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         alignItems: 'center', 
         height: '60vh' }}>
       <Uploader></Uploader>
+      <br></br>
     </div>
   );
 }

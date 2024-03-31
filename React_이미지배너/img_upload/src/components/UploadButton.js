@@ -1,21 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function UploadButton() {
-
-    const handleChange = (event) => {
-        const file = event.target.files[0];
-        console.log("업로드된 파일: ", file);
-    }
+function UploadButton({ onClick }) {
 
     return (
-        <StyledUploadButton> 
-            <input  
+        <StyledUploadButton onClick={onClick}>
+            <input
                 type="file"
-                id="imguploadInput"
-                onChange={handleChange}
-                accept="image/*"
                 style={{ display: 'none' }}
+                onChange={onClick}
             />
         </StyledUploadButton>
     )
@@ -29,7 +22,7 @@ const StyledUploadButton = styled.button`
     width: 50px;
     height: 50px;
     cursor: pointer;
-    
+
     opacity: 0;
     transition: opacity 0.1s ease;
 
